@@ -183,6 +183,7 @@ public:
         data_index_++;
       }
     }
+    ESP_LOGD(TAG, "looping");
   }
 
   float get_setup_priority() const override { return setup_priority::DATA; }
