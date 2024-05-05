@@ -164,6 +164,7 @@ public:
 
   void loop() override {
     while (available() != 0) {
+      ESP_LOGD(TAG, "loop(): got data");
       read_byte(&data_[data_index_]);
       auto check = check_byte_();
       if (!check.has_value()) {
